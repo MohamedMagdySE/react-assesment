@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { searchBooks } from '../helpers/bookHelpers.ts';
+import { getBookByStatus } from '../helpers/bookHelpers.ts';
 import Book from './Book.tsx';
 
 function SearchResults() {

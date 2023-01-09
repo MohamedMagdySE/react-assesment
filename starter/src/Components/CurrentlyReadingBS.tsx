@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import books from '../data/booksData.ts';
-import { parseBooks, getBookByStatus } from '../helpers/bookHelpers.ts';
+import { getBookByStatus } from '../helpers/bookHelpers.ts';
 import Book from './Book.tsx';
 
 function CurrentlyReadingBS() {
@@ -18,7 +17,6 @@ function CurrentlyReadingBS() {
     
     
     function renderBooks() {
-        let booksArr = books;
         
         let currBooks = getBookByStatus(state.bookItems, "currently");
         let renderedCurrBooks = currBooks.map(book => {
